@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: MilkL;
+  src: url("./fonts/TT-Milks-Script-Trial-Light-BF664ffceabeab7.otf");
+}
+@font-face {
+  font-family: MilkR;
+  src: url("./fonts/TT-Milks-Script-Trial-Regular-BF664ffceacb1e4.otf");
+}
+@font-face {
+  font-family: MilkB;
+  src: url("./fonts/TT-Milks-Script-Trial-Bold-BF664ffcea9dada.otf");
+}
