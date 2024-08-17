@@ -1,68 +1,10 @@
 <script setup>
-import { onMounted, ref } from "vue";
 
-let curentTime = new Date().getHours();
-
-const linearGradientArray = [
-  { from: "#2c3e50", to: "#4ca1af" },
-  { from: "#243B55", to: "#141E30" },
-  { from: "#000428", to: "#004e92" },
-  { from: "#141E30", to: "#243B55" },
-  { from: "#000428", to: "#004e92" },
-  { from: "#396afc", to: "#2948ff" },
-  { from: "#2c3e50", to: "#fd746c" },
-  { from: "#fc4a1a", to: "#f7b733" },
-  { from: "#ff5f6d", to: "#ffc371" },
-  { from: "#fc4a1a", to: "#f7b733" },
-  { from: "#16a085", to: "#f4d03f" },
-  { from: "#f2994a", to: "#f2c94c" },
-  { from: "#f7797d", to: "#FBD786" },
-  { from: "#43cea2", to: "#185a9d" },
-  { from: "#1c92d2", to: "#f2fcfe" },
-  { from: "#36d1dc", to: "#5b86e5" },
-  { from: "#2b5876", to: "#4e4376" },
-  { from: "#a8c0ff", to: "#3f2b96" },
-  { from: "#4facfe", to: "#00f2fe" },
-  { from: "#7b4397", to: "#dc2430" },
-  { from: "#2c3e50", to: "#fd746c" },
-  { from: "#141E30", to: "#243B55" },
-  { from: "#000428", to: "#004e92" },
-  { from: "#2c3e50", to: "#4ca1af" },
-];
-
-const stateOfLinearGradient = ref();
-console.log(stateOfLinearGradient);
-
-const applyGradient = () => {
-  if (stateOfLinearGradient.value) {
-    stateOfLinearGradient.value.style.backgroundImage =
-      `linear-gradient(to right, ${linearGradientArray[curentTime].from}, ${linearGradientArray[curentTime].to})`;
-  }
-};
-
-applyGradient();
-
-onMounted(() => {
-  try {
-    // stateOfLinearGradient.value.classList.add(
-    //   `bg-gradient-to-br from-[${linearGradientArray[curentTime].from}] to-[${linearGradientArray[curentTime].to}]`
-    // );
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-console.log(
-  linearGradientArray[curentTime].from,
-  ` + `,
-  linearGradientArray[curentTime].to
-);
 </script>
 
 <template>
   <section
-    ref="stateOfLinearGradient"
-    class="relative h-screen bg-gradient-to-br from-[#bbdffd] to-[#e8d2f7] overflow-hidden"
+    class="relative h-screen overflow-hidden bg-gradient-to-br from-[#bbdffd] to-[#e8d2f7]"
   >
     <div
       class="absolute top-[-60%] left-[10%] w-[1800px] h-[1800px] border-[500px] border-[#d8f2ff] rounded-full z-0"
@@ -137,3 +79,9 @@ console.log(
     </div>
   </section>
 </template>
+
+<style scoped>
+.kido {
+  background-image: linear-gradient(#bbdffd, #e8d2f7);
+}
+</style>
